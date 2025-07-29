@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoTestsLastHomeWork.Helpers;
 using AutoTestsLastHomeWork.Pages;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace AutoTestsLastHomeWork.Tests.UITests;
 
@@ -43,6 +44,6 @@ public class Sort : BaseTests
                     if (item.Name == item2.Name && item.Price == item2.Price)
                         DI.AllureReportHelper.MessageInNewStep($"Значения совпадают: {item.Name} {item.Price}");
         });
-
+        DI.AuthHelper.Logout();
     }
 }

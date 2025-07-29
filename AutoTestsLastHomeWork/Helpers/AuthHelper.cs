@@ -17,4 +17,13 @@ public class AuthHelper : BaseHelper
             StartPage.Submit.SendKeys(Keys.Enter);
         });
     }
+    public void Logout()
+    {
+        DI.AllureReportHelper.RunStep($"Выход", () =>
+        {
+            Inventory.BurgerMenu.Click();
+            DI.BaseHelper.WaitElementUntilClickable(Inventory.Logout);
+            DI.Driver.FindElement(Inventory.Logout).Click();
+        });
+    }
 }

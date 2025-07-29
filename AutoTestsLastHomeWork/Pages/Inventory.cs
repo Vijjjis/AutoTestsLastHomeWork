@@ -15,6 +15,9 @@ public class Inventory
     public static By InventoryItemName = By.ClassName("inventory_item_name");
     public static By InventoryItemPrice = By.ClassName("inventory_item_price");
 
+    public static IWebElement BurgerMenu = DI.Driver.FindElement(By.CssSelector("button[id ='react-burger-menu-btn']"));
+    public static By Logout = By.CssSelector("a[id='logout_sidebar_link']");
+
 
 
 }

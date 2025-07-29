@@ -34,6 +34,7 @@ public static class DI
         {
             var options = new ChromeOptions();
             options.PageLoadStrategy = PageLoadStrategy.Eager;
+            options.AddArgument("--incognito");
             return new ChromeDriver(options);
         });
 
